@@ -1,0 +1,35 @@
+#include <stdio.h>
+void main()
+{
+    int op;
+    int num=0;
+    printf("***** MENU PRINCIPAL *****\n");//mensajes para indicar las opciones del menu
+    printf("1.Sucesion de ULAM \n2.Salir del programa\n");
+    printf("Escoja la opcion:");
+    scanf("%d",&op);//se lee la opcion
+    switch(op)
+    {
+        case 1://en le caso 1 va el programa
+        	do// con este do se controla el ingreso de un numero positivo
+        	{
+        		printf("Ingrese el numero que sea positivo\n");
+        		scanf("%d",&num);
+			}while(num<=0);
+        	do//aqui se realiza el programa hasta que cumpla la condicion para que termine el programa
+        	{
+        		if(num%2==0)//se comprara si el residuo es igual a 0
+        		{
+        			num/=2;	
+				}
+				else//si no cumple la condicion se realiza la condicion siguiente
+				{
+					num*=3;
+					num+=1;
+				}
+				printf("%d,",num);
+			}while(num!=1);
+        break;
+        case 2://en el caso 2 es la salida
+        break;
+    }
+}
